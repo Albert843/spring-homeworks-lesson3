@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list of issues</title>
+</head>
+<body>
+    <h1>Выдача книг</h1>
+    <table>
+      <tr>
+        <th>Reader</th>
+        <th>Book</th>
+        <th>Date of issue</th>
+      </tr>
+      <tr th:each="issue: ${issues}">
+          <td th:text="${issue.getIdReader()}"></td>
+          <td th:text="${issue.getIdBook()}"></td>
+          <td th:text="${issue.getTime()}"></td>
+      </tr>
+    </table>
+</body>
+</html>
