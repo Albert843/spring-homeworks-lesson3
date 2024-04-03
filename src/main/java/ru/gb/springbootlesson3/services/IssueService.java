@@ -31,7 +31,7 @@ public class IssueService {
         }
 
         Issue issue = new Issue(request.getReaderId(), request.getBookId());
-        issueRepository.createIssue(issue);
+        issueRepository.save(issue);
         return issue;
     }
 
@@ -42,6 +42,6 @@ public class IssueService {
             log.info("Не удалось найти выдачу с id " + id);
             throw new NoSuchElementException("Не удалось найти выдачу с id " + id);
         }
-        return issueRepository.findById(id);
+        return issueRepository.findById(id).get();
     }
 }
