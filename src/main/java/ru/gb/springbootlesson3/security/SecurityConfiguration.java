@@ -20,7 +20,8 @@ public class SecurityConfiguration {
                         .requestMatchers("any/**").permitAll()
                         .anyRequest().denyAll()
                 )
-                .formLogin(Customizer.withDefaults())
+                .formLogin(Customizer.withDefaults(
+                ))
                 .build();
     }
 }
