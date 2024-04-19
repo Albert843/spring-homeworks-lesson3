@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>Список всех доступных книг</h1>
+    <h2>for admin</h2>
     <ul>
         <li th:each="book: ${books}" th:text="${book.name}"></li>
     </ul>

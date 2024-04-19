@@ -19,7 +19,7 @@ public class MyFilter implements Filter {
             String uri = httpServletRequest.getRequestURI();
             log.info("Входящий запрос: {}", uri);
 
-            if (uri.startsWith("/admin")) {
+            if (uri.startsWith("/admins")) {
                 ((HttpServletResponse) servletResponse).sendError(403);
             } else {
                 filterChain.doFilter(servletRequest, servletResponse);
